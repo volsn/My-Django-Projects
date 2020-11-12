@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+
+{% block title %}
+    HOME
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Welcome to home page</h1>
+            <h2>Go to <a href="{% url 'form_page' %}">form page</a></h2>
+        </div>
+    </div>
+{% endblock %}
