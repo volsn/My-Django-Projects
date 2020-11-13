@@ -18,3 +18,15 @@ def form_name_view(request):
             print('Text: ', form.cleaned_data['text'])
 
     return render(request, 'basic_app/form_page.html', {'form': form})
+
+def preorder_view(request):
+    form = forms.PreorderForm()
+
+    if request.method == 'POST':
+        form = forms.PreorderForm(request.POST)
+        if form.is_valid():
+            form.save(commit=True)
+            return render(request, 'basic_app/index.html')
+
+
+    return render(request, 'basic_app/preorder.html', {'form': form})

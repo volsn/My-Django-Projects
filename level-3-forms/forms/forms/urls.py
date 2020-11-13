@@ -21,5 +21,6 @@ from basic_app import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
-    path('formpage', views.form_name_view, name='form_page')
+    path('formpage/', views.form_name_view, name='form_page'),
+    path('preorder/', views.preorder_view, name='preorder')
 ]
